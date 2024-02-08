@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async function</title>
+  </head>
+  <body style="background-color: #212121; color: white">
+    <h1>tushar viradya</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+      const ki = function () {
+        document.querySelector("h1").innerHTML = "hello";
+      };
+      document.querySelector("#start").addEventListener("click", function () {
+        const start = function () {
+          document.querySelector("h1").innerHTML = "hey";
+        };
+        setTimeout(start, 3000);
+      });
+      //   const stopMe = setTimeout(ki, 2000);
+      //   document.querySelector("#stop").addEventListener("click", function () {
+      //     clearTimeout(stopMe);
+      //     console.log("stopped");
+      //   });
+    </script>
+  </body>
+</html>
+
+<!--setTimeout() : needs handler and time
+->when we have to stop setTimeour so we use clearTimeout()
+-->
